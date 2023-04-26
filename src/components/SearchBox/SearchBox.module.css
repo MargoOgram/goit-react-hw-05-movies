@@ -1,0 +1,25 @@
+.searchForm{
+    display: inline-flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      margin-left: 35%;
+        margin-right: 30%;
+  }
+    
+  
+  
+  .searchInput{
+    padding: 8px 32px 8px 8px;
+    margin: 10px 20px;
+      border: 2px solid #c921f3;
+      border-radius: 8px;
+      font: inherit;
+  }
+  
+  .searchInput:hover {
+    background-color: #d6d1d7;
+    color: black;
+    
+  }
