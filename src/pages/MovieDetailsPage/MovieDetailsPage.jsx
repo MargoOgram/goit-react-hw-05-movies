@@ -21,7 +21,7 @@ function MovieDetailsPage() {
     color: '#2196f3',
   };
 
-  const handleClick = () => navigate(-1);
+  const handleClick = () => navigate(location?.state?.from ?? '/');
 
   useEffect(() => {
     setLoading(true);
@@ -66,7 +66,7 @@ function MovieDetailsPage() {
           <NavLink
             to={`/movies/${movieId}/reviews`}
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
-            state={{ from: location }}
+            state={location.state}
           >
             <button className={s.backButton}>Reviews</button>
           </NavLink>
@@ -74,7 +74,7 @@ function MovieDetailsPage() {
           <NavLink
             to={`/movies/${movieId}/cast`}
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
-            state={{ from: location }}
+            state={location.state}
           >
             <button className={s.backButton}>Cast</button>
           </NavLink>
